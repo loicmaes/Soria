@@ -10,7 +10,11 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxtjs/google-fonts",
     "shadcn-nuxt",
+    "@nuxtjs/i18n",
   ],
+  experimental: {
+    appManifest: false,
+  },
   eslint: {
     checker: true,
     config: {
@@ -31,5 +35,10 @@ export default defineNuxtConfig({
     configPath: "tailwind.config.ts",
     exposeConfig: false,
     viewer: true,
+  },
+  i18n: {
+    vueI18n: "i18n.config.ts",
+    locales: ["fr"],
+    defaultLocale: "fr",
   },
 });
